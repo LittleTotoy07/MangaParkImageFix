@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "MangaPark Image Fixer (Full Auto Mode)",
+  "version": "2.1",
+  "description": "Automatically fixes all MangaPark image domains and servers by testing all combinations.",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://mangapark.net/*",
+        "*://*.mangapark.net/*",
+        "*://mangapark.org/*",
+        "*://*.mangapark.org/*",
+        "*://mangapark.com/*",
+        "*://*.mangapark.com/*",
+        "*://mangapark.io/*",
+        "*://*.mangapark.io/*",
+        "*://mangapark.to/*",
+        "*://*.mangapark.to/*",
+        "*://mangapark.me/*",
+        "*://*.mangapark.me/*"
+      ],
+      "js": ["fix.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": []
+}
